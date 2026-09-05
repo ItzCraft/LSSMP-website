@@ -196,7 +196,7 @@ body::after {
     height: var(--size);
 
     background-image:
-        url("assets/cherry_leaf.png");
+        url("../assets/cherry_leaf.png");
 
     background-size: contain;
 
