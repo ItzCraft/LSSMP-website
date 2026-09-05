@@ -61,7 +61,7 @@ body {
 .logo { 
     position: relative; 
     z-index: 2; 
-    width: min(700px, 85vw); 
+    width: min(850px, 85vw); 
     margin-bottom: 35px; 
     filter: drop-shadow( 0 6px 0 rgba(0, 0, 0, 0.65) ); 
     animation: logoFloat 3s ease-in-out infinite; 
@@ -86,7 +86,7 @@ body {
 
     z-index: 2;
 
-    width: min(520px, 82vw);
+    width: min(320px, 82vw);
 
     display: flex;
 
