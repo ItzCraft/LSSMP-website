@@ -15,7 +15,9 @@ body {
 
 @font-face {
     font-family: 'Monocraft';
-    src: url('https://jsdelivr.net') format('woff2');
+    src: url('assets/fonts/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -24,7 +26,7 @@ body {
     background: #000;
 
     color: white;
-    
+
     font-family: "Monocraft", Arial, sans-serif;
 
     overflow-x: hidden;
