@@ -302,6 +302,8 @@ body::after {
     padding-top: 120px;
 
     padding-bottom: 80px;
+
+    font-family: "Monocraft", sans-serif;
 }
 
 .hero {
