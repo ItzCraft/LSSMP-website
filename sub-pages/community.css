@@ -24,13 +24,7 @@ body {
     background: #000;
 
     color: white;
-
-    /*
-        Здесь можно подключить
-        настоящий Minecraft-подобный
-        шрифт через @font-face.
-    */
-
+    
     font-family: "Monocraft", Arial, sans-serif;
 
     overflow-x: hidden;
