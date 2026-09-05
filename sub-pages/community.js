@@ -7,31 +7,26 @@ function createLeaf() {
     const leaf =
         document.createElement("div");
 
-    leaf.classList.add(
-        "cherry-leaf"
-    );
+    leaf.classList.add("cherry-leaf");
 
 
     const size =
         Math.random() * 22 + 16;
 
 
-
     const opacity =
-        Math.random() * 0.45 + 0.45;
-
+        Math.random() * 0.45 + 0.4;
 
     const duration =
-        Math.random() * 5 + 7;
-
-
-    const rotationDuration =
-        Math.random() * 2 + 2;
-
+        Math.random() * 5 + 8;
 
 
     const left =
         Math.random() * 100;
+
+
+    const wind =
+        Math.random() * 300 - 150;
 
 
     leaf.style.left =
@@ -53,52 +48,33 @@ function createLeaf() {
     );
 
     leaf.style.setProperty(
-        "--rotation-duration",
-        `${rotationDuration}s`
+        "--wind",
+        `${wind}px`
     );
 
 
-
-    leavesContainer.appendChild(
-        leaf
-    );
-
+    leavesContainer.appendChild(leaf);
 
 
     setTimeout(() => {
-
         leaf.remove();
-
     }, duration * 1000 + 500);
 }
 
 
 
-function startLeaves() {
+setInterval(() => {
+
+    createLeaf();
+
+}, 700);
 
 
-    setInterval(() => {
+for (let i = 0; i < 8; i++) {
 
-        createLeaf();
-
-    }, 650);
-
-
-
-    for (
-        let i = 0;
-        i < 8;
-        i++
-    ) {
-
-        setTimeout(
-            createLeaf,
-            i * 250
-        );
-
-    }
+    setTimeout(
+        createLeaf,
+        i * 300
+    );
 
 }
-
-
-startLeaves();

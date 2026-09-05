@@ -172,9 +172,7 @@ body::after {
 }
 
 #leaves {
-
     position: fixed;
-
     inset: 0;
 
     z-index: 500;
@@ -184,24 +182,19 @@ body::after {
     overflow: hidden;
 }
 
-
 .cherry-leaf {
-
     position: absolute;
 
-    top: -80px;
+    top: -100px;
 
     width: var(--size);
-
     height: var(--size);
 
     background-image:
         url("../assets/cherry_leaf.png");
 
     background-size: contain;
-
     background-repeat: no-repeat;
-
     background-position: center;
 
     image-rendering: pixelated;
@@ -209,68 +202,73 @@ body::after {
     opacity: var(--opacity);
 
     animation:
-        leafFall var(--duration) linear forwards,
-        leafRotate var(--rotation-duration) linear infinite;
+        leafFall var(--duration) cubic-bezier(0.37, 0, 0.63, 1) forwards;
 
-    will-change:
-        transform;
+    will-change: transform;
 }
 
 @keyframes leafFall {
 
     0% {
-
         transform:
-            translate3d(
-                0,
-                -100px,
-                0
-            )
-            rotate(0deg);
+            translate3d(0, -100px, 0)
+            rotate(0deg)
+            scale(1);
     }
 
-    25% {
-
+    20% {
         transform:
             translate3d(
-                80px,
-                25vh,
+                calc(var(--wind) * 0.3),
+                20vh,
                 0
             )
-            rotate(90deg);
+            rotate(80deg)
+            scale(0.95);
     }
 
-    50% {
-
+    40% {
         transform:
             translate3d(
-                -60px,
-                50vh,
+                calc(var(--wind) * -0.5),
+                40vh,
                 0
             )
-            rotate(180deg);
+            rotate(170deg)
+            scale(1.05);
     }
 
-    75% {
-
+    60% {
         transform:
             translate3d(
-                120px,
-                75vh,
+                calc(var(--wind) * 0.7),
+                60vh,
                 0
             )
-            rotate(270deg);
+            rotate(260deg)
+            scale(0.9);
+    }
+
+    80% {
+        transform:
+            translate3d(
+                calc(var(--wind) * -0.3),
+                80vh,
+                0
+            )
+            rotate(350deg)
+            scale(1.05);
     }
 
     100% {
-
         transform:
             translate3d(
-                -50px,
-                110vh,
+                var(--wind),
+                115vh,
                 0
             )
-            rotate(360deg);
+            rotate(450deg)
+            scale(1);
     }
 }
 
