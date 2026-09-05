@@ -31,7 +31,7 @@ body {
         шрифт через @font-face.
     */
 
-    font-family: "Minecraft", Arial, sans-serif;
+    font-family: "Monocraft", Arial, sans-serif;
 
     overflow-x: hidden;
 }
