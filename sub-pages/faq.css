@@ -1,14 +1,9 @@
 @font-face {
-
     font-family: "Monocraft";
-
-    src:
-        url("../assets/fonts/Minecraft.ttf")
-        format("truetype");
-
-    font-weight: normal;
-
+    src: url("../assets/fonts/Minecraft.ttf") format("truetype");
+    font-weight: 400;
     font-style: normal;
+    font-display: block;
 }
 
 
@@ -34,19 +29,20 @@ body {
 
 
 body {
-
+    background: #000;
     color: white;
 
-    font-family:
-        "Monocraft",
-        Arial,
-        sans-serif;
-
-    background: #000;
+    font-family: "Monocraft", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 
     overflow-x: hidden;
-    letter-spacing: 4px
 
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: geometricPrecision;
+    font-synthesis: none;
 }
 
 body::before {
@@ -120,6 +116,12 @@ body::after {
 
 
 .home-button {
+
+    font-family: "Monocraft", sans-serif;
+
+    font-size: 16px;
+    
+    font-weight: 400;
 
     display: flex;
 
