@@ -45,6 +45,7 @@ body {
     background: #000;
 
     overflow-x: hidden;
+    letter-spacing: 4px
 
 }
 
@@ -310,8 +311,6 @@ body::after {
 
 }
 
-
-/* ответ */
 
 .answer {
 
