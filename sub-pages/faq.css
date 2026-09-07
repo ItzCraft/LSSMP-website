@@ -1,0 +1,378 @@
+@font-face {
+
+    font-family: "Monocraft";
+
+    src:
+        url("../assets/fonts/Minecraft.ttf")
+        format("truetype");
+
+    font-weight: normal;
+
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    min-height: 100%;
+
+}
+
+
+body {
+
+    color: white;
+
+    font-family:
+        "Monocraft",
+        Arial,
+        sans-serif;
+
+    background: #000;
+
+    overflow-x: hidden;
+
+}
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+        url("../assets/background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.3),
+            rgba(0,0,0,.65)
+        );
+
+}
+
+
+.topbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 64px;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 22px;
+
+    background:
+        rgba(15,15,15,.9);
+
+    border-bottom:
+        4px solid #111;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.4);
+
+}
+
+
+.home-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 42px;
+
+    padding: 0 25px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    background: #777;
+
+    border: 3px solid #222;
+
+    box-shadow:
+        inset 0 3px rgba(255,255,255,.2),
+        inset 0 -5px rgba(0,0,0,.3);
+
+    text-shadow:
+        3px 3px #222;
+
+    transition:
+        transform .1s,
+        filter .1s;
+
+}
+
+
+.home-button:hover {
+
+    transform: scale(1.05);
+
+    filter: brightness(1.15);
+
+}
+
+.topbar-title {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 20px;
+
+    text-shadow:
+        3px 3px #222;
+
+}
+
+.content {
+
+    width:
+        min(1000px, 92vw);
+
+    margin:
+        0 auto;
+
+    padding-top: 115px;
+
+    padding-bottom: 70px;
+
+}
+
+.hero {
+
+    padding:
+        45px 25px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    background:
+        rgba(20,20,20,.78);
+
+    border:
+        4px solid rgba(0,0,0,.7);
+
+}
+
+
+.hero h1 {
+
+    margin: 0 0 15px;
+
+    font-size:
+        clamp(40px,6vw,70px);
+
+    text-shadow:
+        5px 5px #222;
+
+}
+
+
+.hero p {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    opacity: .9;
+
+}
+
+.faq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.faq-item {
+
+    background:
+        rgba(20,20,20,.86);
+
+    border:
+        3px solid rgba(0,0,0,.75);
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.25);
+
+}
+
+
+.faq-item summary {
+
+    cursor: pointer;
+
+    padding:
+        20px 24px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    list-style: none;
+
+    text-shadow:
+        3px 3px #222;
+
+    transition:
+        background .15s;
+
+}
+
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.faq-item summary::after {
+
+    content: "+";
+
+    float: right;
+
+    font-size: 22px;
+
+}
+
+
+.faq-item[open] summary::after {
+
+    content: "−";
+
+}
+
+
+.faq-item summary:hover {
+
+    background:
+        rgba(255,255,255,.08);
+
+}
+
+
+/* ответ */
+
+.answer {
+
+    padding:
+        0 24px 22px;
+
+    line-height: 1.7;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    color:
+        rgba(255,255,255,.9);
+
+}
+
+
+.footer {
+
+    padding-top: 50px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    opacity: .6;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .topbar {
+
+        height: 58px;
+
+        padding: 0 12px;
+
+    }
+
+    .home-button {
+
+        height: 38px;
+
+        padding: 0 15px;
+
+        font-size: 12px;
+
+    }
+
+    .topbar-title {
+
+        font-size: 14px;
+
+    }
+
+    .content {
+
+        padding-top: 90px;
+
+    }
+
+}

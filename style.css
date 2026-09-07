@@ -86,7 +86,7 @@ body {
 
     z-index: 2;
 
-    width: min(220px, 82vw);
+    width: 180px;
 
     display: flex;
 
@@ -94,7 +94,7 @@ body {
 
     align-items: center;
 
-    gap: 14px;
+    gap: 10px;
 }
 
 
@@ -121,14 +121,13 @@ body {
 
     inset: 0;
 
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
 
     object-fit: fill;
 
     image-rendering: pixelated;
 }
-
 
 
 .menu-button span {
@@ -200,30 +199,27 @@ body {
     }
 
 }
+
 @media (max-width: 600px) {
 
     .logo {
         width: 88vw;
-
         margin-bottom: 25px;
     }
 
     .buttons {
-        width: 88vw;
-
+        width: 180px;
         gap: 10px;
     }
 
     .menu-button span {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .version {
         font-size: 9px;
     }
-
 }
-
 
 @media (prefers-reduced-motion: reduce) {
 
